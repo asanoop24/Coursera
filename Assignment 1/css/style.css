@@ -1,0 +1,68 @@
+body {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Segoe UI';
+    text-align: center;
+}
+
+section {
+    background-color: grey;
+    position:relative;
+    border:2px solid black;    
+    margin-right:10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-top:auto;
+    font-family: 'Segoe UI';
+}
+
+#b p {
+    background-color:maroon;
+    color:white;
+}
+#c p {
+    background-color:lightgoldenrodyellow;
+}
+#a p {
+    background-color:salmon;
+}
+
+p {
+    font-family: 'Segoe UI Light';
+    font-weight: bold;
+    text-align: center;
+    width:20%;
+    left:79.5%;
+    position:relative;
+    top:0px;
+    right:0%;
+    margin-top:0px;
+    border:1px solid black;
+    border-left-width:2px;
+    border-bottom-width:2px;
+    border-right-width:0px;
+    border-top-width:0px;
+}
+
+.row {
+    width:100%;
+    margin-left: 0px;
+}
+
+@media (min-width:992px) {
+    .desktop {
+        float:left;
+        width:33.33%;
+    }
+}
+@media (min-width:768px) and (max-width:991px) {
+    .tablet {
+        float:left;
+        width:50%;
+    }
+    #c {
+        width:100%;
+    }
+}
