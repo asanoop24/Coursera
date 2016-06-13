@@ -17,7 +17,7 @@ $(document).ready(function(){
         }
     });
     $('#nextBox').click(function(){
-        if(currIndex < 3){
+        if(currIndex < 4){
             nextIndex=currIndex+1;
             currImage = '#i' + currIndex.toString();
             nextImage = '#i' + nextIndex.toString();
