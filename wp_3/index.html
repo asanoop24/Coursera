@@ -13,7 +13,7 @@
 
 <body>
     <div class="overlay">
-        <span class="textArea">Tasty and delicious food just a couple of steps away!</span>
+        <span class="textArea">Delicious food just a couple of steps away!</span>
         <div class="actual" id="yes">
             <select id="city" class="selectCity">
                 <option id="sel_opt_1" value="" disabled="disabled" selected="selected">Please select city</option>
@@ -21,10 +21,6 @@
                 <option value="New Delhi">New Delhi</option>
                 <option value="Mumbai">Mumbai</option>
                 <option value="Pune">Pune</option>
-                <option value="Indore">Indore</option>
-                <option value="Bhopal">Bhopal</option>
-                <option value="Coimbatore">Coimbatore</option>
-                <option value="Chennai">Chennai</option>
                 <option value="Hyderabad">Hyderabad</option>
                 <option value="Vizag">Vizag</option>
                 <option value="Nagpur">Nagpur</option>
@@ -33,8 +29,8 @@
                 <option value="Ahmedabad">Ahmedabad</option>
                 <option value="Vadodara">Vadodara</option>
             </select>
-            <input type="search" class="selectArea" name="area" placeholder="Type in your Area">
-            <input type="button" id="submit" value="Look for Food" onclick="location.href='http://swiggy.com'" action="www.google.com">
+            <input type="search" class="selectArea" name="area" placeholder="Type in your locality">
+            <input type="button" id="submit" value="Look for Food" target="_new" onClick="window.open('http://swiggy.com')">
         </div>
         </div>    
 </body>
