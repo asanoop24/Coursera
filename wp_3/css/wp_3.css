@@ -5,7 +5,7 @@
 }
 
 html {
-    background: url(http://watchstreetconsulting.com/wp-content/uploads/2015/04/web_design_desk2.jpg) no-repeat center fixed;
+    background: url('background.jpg') no-repeat center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -49,6 +49,7 @@ html {
     color:dimgrey;
     cursor: pointer;
     margin-left: 3px;
+    border:0px;
 }
 
 .selectArea {
@@ -58,6 +59,7 @@ html {
     font-weight: 500;
     font-size: 15px;
     padding-left:10px;
+    border:0px;
 }
 
 #submit {
