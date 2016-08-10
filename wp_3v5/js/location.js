@@ -46,6 +46,7 @@ function initMap(){
                     marker.setVisible(false);
                     marker.map = map;
                     marker.anchorPoint = (pos.lat, pos.long);
+                    map.setPosition(pos.lat, pos.long);
 //                    var marker = new google.maps.Marker
 //                    (
 //                        {
