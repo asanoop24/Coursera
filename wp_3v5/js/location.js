@@ -25,7 +25,7 @@ function initMap(){
         types:['(regions)'],
         componentRestrictions: {country: "IN"}
     }; 
-    document.getElementById('locality').addEventListener('click', function(){
+    document.getElementById('detectLocation').addEventListener('click', function(){
         if(navigator.geolocation){
             navigator.geolocation.getCurrentPosition(function(position){
                 var pos = {
