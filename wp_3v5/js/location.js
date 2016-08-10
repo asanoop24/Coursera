@@ -9,7 +9,7 @@ function initMap(){
     
     var autoComplete = new google.maps.places.Autocomplete(input);
     var infoWindow = new google.maps.InfoWindow();
-    var marker = new google.maps.marker({
+    var marker = new google.maps.Marker({
         map : map,
         anchorPoint : new google.maps.Point(0, -29)
     });
