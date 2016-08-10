@@ -47,7 +47,7 @@ function initMap(){
                     marker.setPosition(pos);
                     infoWindow.setPosition(pos);
                     infoWindow.setContent(data.results[1].formatted_address);
-//                    infoWindow.open(map, marker);
+                    infoWindow.open(map, marker);
                 });
             });
         }
