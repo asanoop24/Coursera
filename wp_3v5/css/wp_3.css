@@ -183,7 +183,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 #map {
     width:50%;
-    height:50%;
+    height:40%;
     position:absolute;
     border:2px solid white;
     left:25%;
