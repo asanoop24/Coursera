@@ -18,7 +18,8 @@ function toggleBounce(){
         marker.setAnimation(null);
     }
     else {
-        marker.setAnimation(google.maps.Animation.BOUNCE);
+//        marker.setAnimation(google.maps.Animation.BOUNCE);
+        alert(marker.position());
     }
 }
 function initMap(){
@@ -38,7 +39,7 @@ function initMap(){
         map : map,
         draggable: true,
         animation: google.maps.Animation.DROP,
-        anchorPoint : new google.maps.Point(0, 0)
+        position: {lat: 12.99, lng: 77.55}
     });
     marker.addListener('click', toggleBounce);
     document.getElementById('detectLocation').addEventListener('click', function(){
