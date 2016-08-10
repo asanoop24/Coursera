@@ -30,18 +30,20 @@ var getJSON = function(url, callback) {
                   infoWindow.setPosition(pos);
                   infoWindow.setContent('hun ki haal ne');
                   map.setCenter(pos);
-                  alert(pos.lat + ' - ' + pos.lng);
                   //o chal ja hun parava
                   var query = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.lng + '&sensor=true';
-                  getJSON(query, function(err, data) {
-                      if (err != null) {
-                          alert('Something went wrong: ' + err);
-                      } 
-                      else {
-                          alert('Your Json result is:  ' + data.results[1].formatted_address);
-//                          result.innerText = data.result;
-                      }                  
-                  });
+                    document.getElementById('detectLocation').addEventListener('click', function(){
+                       getJSON(query, function(err, data) {
+                            if (err != null) {
+                                alert('Something went wrong: ' + err);
+                            } 
+                            else {
+                               document.getElementById('locality').value = data.results[1].formatted_address);
+//                                result.innerText = data.result;
+                            }                  
+                        });                                                    
+                                                                               });
+
 
                   var marker = new google.maps.Marker
                   (
