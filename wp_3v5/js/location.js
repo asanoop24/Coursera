@@ -43,7 +43,7 @@ function initMap(){
                     document.getElementById('locality').value = data.results[1].formatted_address;
 //                    alert(pos.lat + ' - ' + pos.long);
                     map.setCenter(pos);
-                    map.setZoom(17);
+                    map.setZoom(15);
                     marker.setPosition(pos);
                     infoWindow.setPosition(pos);
                     marker.setContent(data.results[1].formatted_address);
@@ -67,7 +67,7 @@ function initMap(){
         }
         else{
             map.setCenter(place.geometry.location);
-            map.setZoom(17);
+            map.setZoom(15);
         }
         
         
