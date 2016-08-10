@@ -42,8 +42,8 @@ function initMap(){
                 getJSON(query, function(err, data){
                     document.getElementById('locality').value = data.results[1].formatted_address;
 //                    alert(pos.lat + ' - ' + pos.long);
-                    map.setCenter(pos);
-                    map.zoom(17);
+                    map.setcenter(pos);
+                    map.setzoom(17);
                     var marker = new google.maps.Marker
                     (
                         {
