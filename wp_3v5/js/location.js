@@ -8,7 +8,7 @@ function initMap(){
     var types = 'Addresses';
     
     var autoComplete = new google.maps.places.Autocomplete(input);
-    var infoWindow = new google.maps.infoWindow();
+    var infoWindow = new google.maps.infoWindow({map: map});
     var marker = new google.maps.marker({
         map : map,
         anchorPoint : new google.maps.Point(0, -29)
