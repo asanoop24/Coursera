@@ -12,6 +12,7 @@ var getJSON = function(url, callback){
     };
     xhr.send();
 };
+var marker;
 function toggleBounce(){
     if (marker.getAnimation() !== null) {
         marker.setAnimation(null);
@@ -33,7 +34,7 @@ function initMap(){
     }; 
     var autoComplete = new google.maps.places.Autocomplete(input, options);
     var infoWindow = new google.maps.InfoWindow();
-    var marker = new google.maps.Marker({
+    marker = new google.maps.Marker({
         map : map,
         draggable: true,
         animation: google.maps.Animation.DROP,
