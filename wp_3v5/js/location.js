@@ -32,7 +32,7 @@ function initMap(){
                     lat : position.coords.latitude,
                     long : position.coords.longitude
                 };
-                var query = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.lng + '&sensor=true';
+                var query = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.long + '&sensor=true';
                 getJSON(query, function(err, data){
                    document.getElementById('locality').value = data.results[1].formatted_address; 
                 });
