@@ -41,13 +41,8 @@ function initMap(){
                 var query = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.long + '&sensor=true';
                 getJSON(query, function(err, data){
                     document.getElementById('locality').value = data.results[1].formatted_address;
-                    alert(pos.lat + ' - ' + pos.long);
-                    map.setCenter(pos.lat, pos.long);
-                    marker.setVisible(false);
-//                    marker.map = map;
-//                    marker.anchorPoint = (pos.lat, pos.long);
-//                    marker.setVisible(true);
-                    map.setPosition(pos.lat, pos.long);
+//                    alert(pos.lat + ' - ' + pos.long);
+                    map.setCenter(pos);
                     var marker = new google.maps.Marker
                     (
                         {
