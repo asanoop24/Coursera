@@ -19,7 +19,7 @@ function toggleBounce(){
     }
     else {
 //        marker.setAnimation(google.maps.Animation.BOUNCE);
-        alert(marker.position());
+        alert(marker.getPosition());
     }
 }
 function initMap(){
