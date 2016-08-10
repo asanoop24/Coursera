@@ -15,7 +15,7 @@ var getJSON = function(url, callback) {
 
 function initMap(){
     var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 12.99, lng: 77.55},
+    center: {lat: 12.99, long: 77.55},
     zoom: 13
     });
 
