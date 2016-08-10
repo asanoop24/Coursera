@@ -14,7 +14,7 @@
                       lng: position.coords.longitude
                   };
                   infoWindow.setPosition(pos);
-                  infoWindow.setContent('ki chalda');
+                  infoWindow.setContent('chalya hun k nai');
                   map.setCenter(pos);
                   var marker = new google.maps.Marker
                   (
