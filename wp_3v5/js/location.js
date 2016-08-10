@@ -1,4 +1,4 @@
-var getJSON = function(url, callback) {
+var getJSON = function(url, callback){
     var xhr = new XMLHttpRequest();
     xhr.open('get', url, true);
     xhr.responseType = 'json';
@@ -12,7 +12,14 @@ var getJSON = function(url, callback) {
     };
     xhr.send();
 };
-
+function toggleBounce(){
+    if (marker.getAnimation() !== null) {
+        marker.setAnimation(null);
+    }
+    else {
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+    }
+}
 function initMap(){
     var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 12.99, lng: 77.55},
