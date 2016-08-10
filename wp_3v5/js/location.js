@@ -43,14 +43,17 @@ function initMap(){
                     document.getElementById('locality').value = data.results[1].formatted_address;
                     alert(pos.lat + ' - ' + pos.long);
                     map.setCenter(pos.lat, pos.long);
-                    var marker = new google.maps.Marker
-                    (
-                        {
-                            position: new google.maps.LatLng(pos.lat, pos.long),
-                            map: map,
-                            title: 'Click me'
-                        }
-                    );
+                    marker.setVisible(false);
+                    marker.map = map;
+                    marker.anchorPoint = (pos.lat, pos.long);
+//                    var marker = new google.maps.Marker
+//                    (
+//                        {
+//                            position: new google.maps.LatLng(pos.lat, pos.long),
+//                            map: map,
+//                            title: 'Click me'
+//                        }
+//                    );
                 });
             });
         }
