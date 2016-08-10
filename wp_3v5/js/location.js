@@ -18,8 +18,7 @@ function toggleBounce(){
         marker.setAnimation(null);
     }
     else {
-//        marker.setAnimation(google.maps.Animation.BOUNCE);
-        alert(marker.getPosition());
+        marker.setAnimation(google.maps.Animation.BOUNCE);
     }
 }
 function initMap(){
@@ -42,6 +41,23 @@ function initMap(){
         position: {lat: 12.99, lng: 77.55}
     });
     marker.addListener('click', toggleBounce);
+    
+//    Set position through marker movement    
+    google.maps.event.addListener(marker, 'dragend', function(){
+        var pos = marker.getPosition();
+        var query = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.lng + '&sensor=true';
+        getJSON(query, function(err, data){
+            document.getElementById('locality').value = data.results[1].formatted_address;
+            map.setCenter(pos);
+            map.setZoom(15);
+            marker.setPosition(pos);
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(data.results[1].formatted_address);
+            infoWindow.open(map, marker);
+        });
+    });
+ 
+//    Set position through Auto-Detect
     document.getElementById('detectLocation').addEventListener('click', function(){
         if(navigator.geolocation){
             navigator.geolocation.getCurrentPosition(function(position){
@@ -52,7 +68,6 @@ function initMap(){
                 var query = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.lng + '&sensor=true';
                 getJSON(query, function(err, data){
                     document.getElementById('locality').value = data.results[1].formatted_address;
-//                    alert(pos.lat + ' - ' + pos.long);
                     map.setCenter(pos);
                     map.setZoom(15);
                     marker.setPosition(pos);
@@ -63,7 +78,7 @@ function initMap(){
             });
         }
     });
-    
+//    Set position through search bar    
     autoComplete.addListener('place_changed', function(){
         infoWindow.close();
         marker.setVisible(false);
