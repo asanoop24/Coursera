@@ -28,7 +28,7 @@ var getJSON = function(url, callback) {
                       lng: position.coords.longitude
                   };
                   infoWindow.setPosition(pos);
-                  infoWindow.setContent('hun ki haal ne');
+                  infoWindow.setContent('hun check kar haan');
                   map.setCenter(pos);
                   //o chal ja hun parava
                   var query = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.lng + '&sensor=true';
