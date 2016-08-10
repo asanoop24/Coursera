@@ -1,3 +1,18 @@
+var getJSON = function(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('get', url, true);
+    xhr.responseType = 'json';
+    xhr.onload = function() {
+      var status = xhr.status;
+      if (status == 200) {
+        callback(null, xhr.response);
+      } else {
+        callback(status);
+      }
+    };
+    xhr.send();
+};
+
 function initMap(){
     var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 12.972442, lng: 77.580643},
@@ -10,7 +25,20 @@ function initMap(){
         types:['(regions)'],
         componentRestrictions: {country: "IN"}
     }; 
-//    document.getElementById('locality').addEventListener('click',)
+    document.getElementById('locality').addEventListener('click', function(){
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(function(position){
+                var pos = {
+                    lat : position.coords.latitude,
+                    long : position.coords.longitude
+                };
+                var query = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.lng + '&sensor=true';
+                getJSON(query, function(err, data){
+                   document.getElementById('locality').value = data.results[1].formatted_address; 
+                });
+            });
+        }
+    });
     
     var autoComplete = new google.maps.places.Autocomplete(input, options);
     var infoWindow = new google.maps.InfoWindow();
