@@ -57,7 +57,7 @@ function initMap(){
         infoWindow.close();
         marker.setVisible(false);
         var place = autoComplete.getPlace();
-        alert(place);
+
         //    1. locating the point on map
         if(!place.geometry){
             window.alert('Autocomplete place contains no geometry!');
