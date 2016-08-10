@@ -14,7 +14,7 @@
                       lng: position.coords.longitude
                   };
                   infoWindow.setPosition(pos);
-                  infoWindow.setContent('hun ki haal ne');
+//                  infoWindow.setContent('hun ki haal ne');
                   map.setCenter(pos);
                   alert(pos.lat + ' - ' + pos.lng);
                   //o chal ja hun parava
