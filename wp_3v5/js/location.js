@@ -33,14 +33,8 @@ function initMap(){
                 };
                 var query = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.long + '&sensor=true';
                 getJSON(query, function(err, data){
-                    var result = data.results[1].formatted_address;
-                    address = [
-                        (place.address_components[0] && place.address_components[0].short_name || ''),
-                        (place.address_components[1] && place.address_components[1].short_name || ''),
-                        (place.address_components[2] && place.address_components[2].short_name || ''),
-                    ].join(' ');
-                    alert(address);
-                    
+                    document.getElementById('locality').value = data.results[1].formatted_address;
+                    document.getElementById('locality').focus();
                 });
             });
         }
