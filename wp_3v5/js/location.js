@@ -56,4 +56,3 @@ function initMap(){
         infoWindow.setContent('<div><strong>' + place.name + '<strong><br>' + address);
         infoWindow.open(map, marker);
     });
-}
