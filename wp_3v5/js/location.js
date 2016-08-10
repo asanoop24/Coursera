@@ -6,8 +6,13 @@ function initMap(){
 
     var input = document.getElementById('locality');
     var types = 'Addresses';
+    var options = {
+        types:['(regions)'],
+        componentRestrictions: {country: "IN"}
+    }; 
+    document.getElementById('locality').addEventListener('click',)
     
-    var autoComplete = new google.maps.places.Autocomplete(input);
+    var autoComplete = new google.maps.places.Autocomplete(input, options);
     var infoWindow = new google.maps.InfoWindow();
     var marker = new google.maps.Marker({
         map : map,
@@ -52,7 +57,6 @@ function initMap(){
                 (place.address_components[2] && place.address_components[2].short_name || ''),
             ].join(' ');
         }
-        document.getElementById('locality').value = address;
         infoWindow.setContent('<div><strong>' + place.name + '<strong><br>' + address);
         infoWindow.open(map, marker);
     });
