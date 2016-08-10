@@ -36,9 +36,9 @@ function initMap(){
             navigator.geolocation.getCurrentPosition(function(position){
                 var pos = {
                     lat : position.coords.latitude,
-                    long : position.coords.longitude
+                    lng : position.coords.longitude
                 };
-                var query = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.long + '&sensor=true';
+                var query = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.lng + '&sensor=true';
                 getJSON(query, function(err, data){
                     document.getElementById('locality').value = data.results[1].formatted_address;
 //                    alert(pos.lat + ' - ' + pos.long);
@@ -47,7 +47,7 @@ function initMap(){
                     var marker = new google.maps.Marker
                     (
                         {
-                            position: new google.maps.LatLng(pos.lat, pos.long),
+                            position: new google.maps.LatLng(pos.lat, pos.lng),
                             map: map,
                             title: 'Click me'
                         }
