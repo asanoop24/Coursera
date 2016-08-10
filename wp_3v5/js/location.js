@@ -22,7 +22,6 @@ function initMap(){
     var input = document.getElementById('locality');
     var types = 'Addresses';
     var options = {
-        types:['(regions)'],
         componentRestrictions: {country: "IN"}
     }; 
     document.getElementById('detectLocation').addEventListener('click', function(){
