@@ -43,6 +43,7 @@ function initMap(){
                     document.getElementById('locality').value = data.results[1].formatted_address;
 //                    alert(pos.lat + ' - ' + pos.long);
                     map.setCenter(pos);
+                    map.zoom(17);
                     var marker = new google.maps.Marker
                     (
                         {
