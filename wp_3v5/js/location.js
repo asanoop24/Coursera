@@ -45,7 +45,7 @@ function initMap(){
 //    Set position through marker movement    
     google.maps.event.addListener(marker, 'dragend', function(){
         var pos = marker.getPosition();
-        alert(marker.getPosition(lat));
+        alert(marker.getPosition().lat());
         alert(pos[0] + ' - ' + pos[1]);
         var query = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.lng + '&sensor=true';
         getJSON(query, function(err, data){
