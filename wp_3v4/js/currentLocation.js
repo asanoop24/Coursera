@@ -19,7 +19,7 @@
                   var marker = new google.maps.Marker
                   (
                       {
-                          position: new google.maps.LatLng(position),
+                          position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
                           map: map,
                           title: 'Click me'
                       }
