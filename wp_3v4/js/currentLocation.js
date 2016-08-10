@@ -16,6 +16,7 @@
                   infoWindow.setPosition(pos);
                   infoWindow.setContent('chalya hun k nai das de');
                   map.setCenter(pos);
+                  alert(pos);
                   var marker = new google.maps.Marker
                   (
                       {
