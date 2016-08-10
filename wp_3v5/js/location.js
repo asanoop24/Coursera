@@ -44,14 +44,15 @@ function initMap(){
 //                    alert(pos.lat + ' - ' + pos.long);
                     map.setCenter(pos);
                     map.setZoom(17);
-                    var marker = new google.maps.Marker
-                    (
-                        {
-                            position: new google.maps.LatLng(pos.lat, pos.lng),
-                            map: map,
-                            title: 'Click me'
-                        }
-                    );
+                    marker.setPosition(pos);
+//                    var marker = new google.maps.Marker
+//                    (
+//                        {
+//                            position: new google.maps.LatLng(pos.lat, pos.lng),
+//                            map: map,
+//                            title: 'Click me'
+//                        }
+//                    );
                 });
             });
         }
