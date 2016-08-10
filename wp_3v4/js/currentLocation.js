@@ -32,7 +32,7 @@ var getJSON = function(url, callback) {
                   map.setCenter(pos);
                   alert(pos.lat + ' - ' + pos.lng);
                   //o chal ja hun parava
-                  var query = 'http://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.lng + '&sensor=true';
+                  var query = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.lng + '&sensor=true';
                   getJSON(query, function(err, data) {
                       if (err != null) {
                           alert('Something went wrong: ' + err);
