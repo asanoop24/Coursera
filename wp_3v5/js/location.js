@@ -42,6 +42,13 @@ function initMap(){
                 getJSON(query, function(err, data){
                     document.getElementById('locality').value = data.results[1].formatted_address;
                     map.setCenter(pos.lat, pos.long);
+                    marker.setIcon(({
+//                        url: place.icon,
+                        size: new google.maps.Point(71, 71),
+                        origin: new google.maps.Point(0, 0),
+                        anchor: new google.maps.Point(17, 34),
+                        scaledSize: new google.maps.Size(35, 35)
+                    }));
                     marker.setPosition(pos.lat, pos.long);
                     marker.setVisible(true);
                 });
