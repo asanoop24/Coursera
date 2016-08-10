@@ -28,9 +28,11 @@ function initMap(){
     var infoWindow = new google.maps.InfoWindow();
     var marker = new google.maps.Marker({
         map : map,
+        draggable: true,
+        animation: google.maps.Animation.DROP,
         anchorPoint : new google.maps.Point(0, 0)
     });
-    
+    marker.addListener('click', toggleBounce);
     document.getElementById('detectLocation').addEventListener('click', function(){
         if(navigator.geolocation){
             navigator.geolocation.getCurrentPosition(function(position){
@@ -73,13 +75,6 @@ function initMap(){
         
         
         //    2. setting up the marker
-//        marker.setIcon(({
-//            url: place.icon,
-//            size: new google.maps.Point(71, 71),
-//            origin: new google.maps.Point(0, 0),
-//            anchor: new google.maps.Point(17, 34),
-//            scaledSize: new google.maps.Size(35, 35)
-//        }));
         marker.setPosition(place.geometry.location);
         marker.setVisible(true);
         
