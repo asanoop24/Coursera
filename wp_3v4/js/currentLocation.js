@@ -20,7 +20,6 @@
             infoWindow.setPosition(pos);
             infoWindow.setContent('ki chalda');
             map.setCenter(pos);
-              map.zoom(12);
 //              infoWindow.setContent('ki chlda');
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
