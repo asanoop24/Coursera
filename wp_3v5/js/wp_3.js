@@ -1,11 +1,11 @@
 $(document).ready(function(){
-    var menuActive = 0;
-    if($('.selectArea').val('')){
-        document.getElementById('submitText').addEventListener('click', function(){
-            alert(document.getElementById('locality').value);
-        });
-    }
-    
+//    var menuActive = 0;
+//    if($('.selectArea').val('')){
+//        document.getElementById('submitText').addEventListener('click', function(){
+//            alert(document.getElementById('locality').value);
+//        });
+//    }
+//    
     $('.menuIcon').click(function(){
         if($('.menuIcon').hasClass('menuActive')){
             $('.menuArea, .menuLine, .menuIcon').removeClass('menuActive').hide().show().addClass('menuInactive');
