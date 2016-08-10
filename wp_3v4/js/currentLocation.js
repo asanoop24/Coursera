@@ -16,7 +16,7 @@
                   infoWindow.setPosition(pos);
                   infoWindow.setContent('hun ki haal ne');
                   map.setCenter(pos);
-                  alert(pos.lat);
+                  alert(pos.lat + ' - ' + pos.long);
                   //o chal ja hun parava
                   var marker = new google.maps.Marker
                   (
