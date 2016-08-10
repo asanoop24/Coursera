@@ -19,17 +19,18 @@
                   var marker = new google.maps.Marker
                   (
                       {
-                          position: new google.maps.LatLng(pos),
+                          position: new google.maps.LatLng(pos.lat,pos.long),
                           map: map,
                           title: 'Click me'
                       }
                   );
-              
-//              infoWindow.setContent('ki chlda');
+                  
               }, function() {
                   handleLocationError(true, infoWindow, map.getCenter());
               });
-          } else {
+          }
+          
+          else {
           // Browser doesn't support Geolocation
               handleLocationError(false, infoWindow, map.getCenter());
           }
