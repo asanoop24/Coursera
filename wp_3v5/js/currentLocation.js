@@ -29,7 +29,7 @@ var getJSON = function(url, callback) {
                   };
                   infoWindow.setPosition(pos);
                   infoWindow.setContent('hun check kar haan');
-                  map.setCenter(pos);
+//                  map.setCenter(pos);
                   //o chal ja hun parava
                   var query = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.lng + '&sensor=true';
                     document.getElementById('detectLocation').addEventListener('click', function(){
