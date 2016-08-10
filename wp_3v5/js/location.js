@@ -4,7 +4,7 @@ function initMap(){
     zoom: 13
     });
 
-    var input = document.getElementById('pac-input');
+    var input = document.getElementById('locality');
     var types = 'Addresses';
     
     var autoComplete = new google.maps.places.Autocomplete(input);
@@ -55,4 +55,4 @@ function initMap(){
         
         infoWindow.setContent('<div><strong>' + place.name + '<strong><br>' + address);
         infoWindow.open(map, marker);
-}
+    });
