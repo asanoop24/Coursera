@@ -16,12 +16,12 @@
                   infoWindow.setPosition(pos);
                   infoWindow.setContent('hun ki haal ne');
                   map.setCenter(pos);
-                  alert(pos.lat + ' - ' + pos.long);
+                  alert(pos.lat + ' - ' + pos.lng);
                   //o chal ja hun parava
                   var marker = new google.maps.Marker
                   (
                       {
-                          position: new google.maps.LatLng(pos.lat, pos.long),
+                          position: new google.maps.LatLng(pos.lat, pos.lng),
                           map: map,
                           title: 'Click me'
                       }
