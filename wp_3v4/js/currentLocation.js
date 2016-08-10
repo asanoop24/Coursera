@@ -1,4 +1,18 @@
- 
+var getJSON = function(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('get', url, true);
+    xhr.responseType = 'json';
+    xhr.onload = function() {
+      var status = xhr.status;
+      if (status == 200) {
+        callback(null, xhr.response);
+      } else {
+        callback(status);
+      }
+    };
+    xhr.send();
+};
+
       function initMap() {
           var map = new google.maps.Map(document.getElementById('map'), {
               center: {lat: 134.397, lng: 150.644},
@@ -14,25 +28,21 @@
                       lng: position.coords.longitude
                   };
                   infoWindow.setPosition(pos);
-//                  infoWindow.setContent('hun ki haal ne');
+                  infoWindow.setContent('hun ki haal ne');
                   map.setCenter(pos);
-//                  alert(pos.lat + ' - ' + pos.lng);
+                  alert(pos.lat + ' - ' + pos.lng);
                   //o chal ja hun parava
-                  function geocodeLatLng(geocoder){
-                      geocoder.geocode({'location': latlng}, function(results, status) {
-                          if (status === 'OK') {
-                              if (results[1]) {
-                                  map.setZoom(15);
-                                  alert(results[1].formatted_address);
-                                  infowindow.setContent(results[1].formatted_address);
-                              } else {
-                                  window.alert('No results found');
-                              }                      
-                          }
-                          else {
-                              window.alert('Geocoder failed due to: ' + status);
-                          }
-                      }
+                  var query = 'http://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.lng + '&sensor=true';
+                  getJSON(query, function(err, data) {
+                      if (err != null) {
+                          alert('Something went wrong: ' + err);
+                      } 
+                      else {
+                          alert('Your Json result is:  ' + data.formatted_address);
+//                          result.innerText = data.result;
+                      }                  
+                  });
+
                   var marker = new google.maps.Marker
                   (
                       {
