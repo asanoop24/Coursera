@@ -13,8 +13,8 @@
                       lat: position.coords.latitude,
                       lng: position.coords.longitude
                   };
-//                  infoWindow.setPosition(pos);
-//                  infoWindow.setContent('hun ki haal ne');
+                  infoWindow.setPosition(pos);
+                  infoWindow.setContent(pos.formatted_address);
                   map.setCenter(pos);
 //                  alert(pos.lat + ' - ' + pos.lng);
                   //o chal ja hun parava
