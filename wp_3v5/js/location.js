@@ -24,6 +24,13 @@ function initMap(){
     var options = {
         componentRestrictions: {country: "IN"}
     }; 
+    var autoComplete = new google.maps.places.Autocomplete(input, options);
+    var infoWindow = new google.maps.InfoWindow();
+    var marker = new google.maps.Marker({
+        map : map,
+        anchorPoint : new google.maps.Point(0, 0)
+    });
+    
     document.getElementById('detectLocation').addEventListener('click', function(){
         if(navigator.geolocation){
             navigator.geolocation.getCurrentPosition(function(position){
@@ -35,16 +42,10 @@ function initMap(){
                 getJSON(query, function(err, data){
                     document.getElementById('locality').value = data.results[1].formatted_address;
                     map.setCenter(pos);
+                    marker.anchorPoint = google.maps.Point(pos.lat, pos.long);
                 });
             });
         }
-    });
-    
-    var autoComplete = new google.maps.places.Autocomplete(input, options);
-    var infoWindow = new google.maps.InfoWindow();
-    var marker = new google.maps.Marker({
-        map : map,
-        anchorPoint : new google.maps.Point(0, 0)
     });
     
     autoComplete.addListener('place_changed', function(){
@@ -76,6 +77,7 @@ function initMap(){
         }));
         marker.setPosition(place.geometry.location);
         marker.setVisible(true);
+        alert(place.geometry.location);
         
         var address = '';
         if(place.address_components){
