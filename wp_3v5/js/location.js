@@ -49,10 +49,10 @@ function initMap(){
         var query = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + lng + '&sensor=true';
         getJSON(query, function(err, data){
             document.getElementById('locality').value = data.results[1].formatted_address;
-            map.setCenter(pos);
+            map.setCenter({lat,lng});
             map.setZoom(15);
-            marker.setPosition(pos);
-            infoWindow.setPosition(pos);
+            marker.setPosition({lat,lng});
+            infoWindow.setPosition({lat,lng});
             infoWindow.setContent(data.results[1].formatted_address);
             infoWindow.open(map, marker);
         });
