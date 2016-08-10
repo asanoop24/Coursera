@@ -41,8 +41,8 @@ function initMap(){
                 var query = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.long + '&sensor=true';
                 getJSON(query, function(err, data){
                     document.getElementById('locality').value = data.results[1].formatted_address;
-                    map.setCenter(pos);
-                    marker.setPosition(pos);
+                    map.setCenter(pos.lat, pos.long);
+                    marker.setPosition(pos.lat, pos.long);
                     marker.setVisible(true);
                 });
             });
