@@ -40,8 +40,7 @@ var getJSON = function(url, callback) {
                             else {
                                document.getElementById('locality').value = data.results[1].formatted_address;
                             }
-                            }
-                                               });                                                    
+                        });
                     });
 
                   var marker = new google.maps.Marker
