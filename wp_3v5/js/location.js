@@ -42,7 +42,8 @@ function initMap(){
                 getJSON(query, function(err, data){
                     document.getElementById('locality').value = data.results[1].formatted_address;
                     map.setCenter(pos);
-                    marker.anchorPoint = google.maps.Point(pos.lat, pos.long);
+                    marker.setPosition(pos);
+                    marker.setVisible(true);
                 });
             });
         }
@@ -77,7 +78,6 @@ function initMap(){
         }));
         marker.setPosition(place.geometry.location);
         marker.setVisible(true);
-        alert(place.geometry.location);
         
         var address = '';
         if(place.address_components){
