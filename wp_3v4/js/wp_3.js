@@ -10,7 +10,7 @@ $(document).ready(function(){
 //        var autocomplete = new google.maps.places.Autocomplete(input, options);
 //    }
     if($('.selectArea').val('')){
-        google.maps.event.addDomListener(window, 'load', initialize);
+//        google.maps.event.addDomListener(window, 'load', initialize);
         document.getElementById('submitText').addEventListener('click', function(){
             alert(document.getElementById('locality').value);
         });
