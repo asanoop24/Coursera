@@ -16,7 +16,7 @@ function initMap(){
     var infoWindow = new google.maps.InfoWindow();
     var marker = new google.maps.Marker({
         map : map,
-        anchorPoint : new google.maps.Point(0, -29)
+        anchorPoint : new google.maps.Point(0, 0)
     });
     
     autoComplete.addListener('place_changed', function(){
