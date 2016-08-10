@@ -33,17 +33,16 @@ var getJSON = function(url, callback) {
                   //o chal ja hun parava
                   var query = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.lng + '&sensor=true';
                     document.getElementById('detectLocation').addEventListener('click', function(){
-                       getJSON(query, function(err, data) {
+                        getJSON(query, function(err, data) {
                             if (err != null) {
                                 alert('Something went wrong: ' + err);
                             } 
                             else {
-                               document.getElementById('locality').value = data.results[1].formatted_address);
-//                                result.innerText = data.result;
-                            }                  
-                        });                                                    
-                                                                               });
-
+                               document.getElementById('locality').value = data.results[1].formatted_address;
+                            }
+                            }
+                                               });                                                    
+                    });
 
                   var marker = new google.maps.Marker
                   (
