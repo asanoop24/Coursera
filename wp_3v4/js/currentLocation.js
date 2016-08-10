@@ -14,13 +14,13 @@
                       lng: position.coords.longitude
                   };
                   infoWindow.setPosition(pos);
-                  infoWindow.setContent('chalya hun k nai das de');
+                  infoWindow.setContent('hun ki haal ne');
                   map.setCenter(pos);
-                  alert(pos);
+                  alert(pos.lat);
                   var marker = new google.maps.Marker
                   (
                       {
-                          position: new google.maps.LatLng(navigator.geolocation.getCurrentPosition(pos)),
+                          position: new google.maps.LatLng(navigator.geolocation.getCurrentPosition(position)),
                           map: map,
                           title: 'Click me'
                       }
