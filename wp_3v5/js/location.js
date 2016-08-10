@@ -52,7 +52,7 @@ function initMap(){
                 (place.address_components[2] && place.address_components[2].short_name || ''),
             ].join(' ');
         }
-        
+        document.getElementById('locality').value = address;
         infoWindow.setContent('<div><strong>' + place.name + '<strong><br>' + address);
         infoWindow.open(map, marker);
     });
