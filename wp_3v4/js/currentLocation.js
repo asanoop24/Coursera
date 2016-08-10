@@ -38,7 +38,7 @@ var getJSON = function(url, callback) {
                           alert('Something went wrong: ' + err);
                       } 
                       else {
-                          alert('Your Json result is:  ' + data.formatted_address);
+                          alert('Your Json result is:  ' + data.results[1].formatted_address);
 //                          result.innerText = data.result;
                       }                  
                   });
