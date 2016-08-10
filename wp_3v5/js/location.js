@@ -10,7 +10,7 @@ function initMap(){
         types:['(regions)'],
         componentRestrictions: {country: "IN"}
     }; 
-    document.getElementById('locality').addEventListener('click',)
+//    document.getElementById('locality').addEventListener('click',)
     
     var autoComplete = new google.maps.places.Autocomplete(input, options);
     var infoWindow = new google.maps.InfoWindow();
