@@ -44,18 +44,18 @@ function initMap(){
                     alert(pos.lat + ' - ' + pos.long);
                     map.setCenter(pos.lat, pos.long);
                     marker.setVisible(false);
-                    marker.map = map;
-                    marker.anchorPoint = (pos.lat, pos.long);
-                    marker.setVisible(true);
+//                    marker.map = map;
+//                    marker.anchorPoint = (pos.lat, pos.long);
+//                    marker.setVisible(true);
                     map.setPosition(pos.lat, pos.long);
-//                    var marker = new google.maps.Marker
-//                    (
-//                        {
-//                            position: new google.maps.LatLng(pos.lat, pos.long),
-//                            map: map,
-//                            title: 'Click me'
-//                        }
-//                    );
+                    var marker = new google.maps.Marker
+                    (
+                        {
+                            position: new google.maps.LatLng(pos.lat, pos.long),
+                            map: map,
+                            title: 'Click me'
+                        }
+                    );
                 });
             });
         }
