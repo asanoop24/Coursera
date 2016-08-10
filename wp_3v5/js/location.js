@@ -45,14 +45,8 @@ function initMap(){
                     map.setCenter(pos);
                     map.setZoom(17);
                     marker.setPosition(pos);
-//                    var marker = new google.maps.Marker
-//                    (
-//                        {
-//                            position: new google.maps.LatLng(pos.lat, pos.lng),
-//                            map: map,
-//                            title: 'Click me'
-//                        }
-//                    );
+                    infoWindow.setPosition(pos);
+                    marker.setContent(data.results[1].formatted_address);
                 });
             });
         }
