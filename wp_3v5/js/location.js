@@ -41,16 +41,16 @@ function initMap(){
                 var query = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.long + '&sensor=true';
                 getJSON(query, function(err, data){
                     document.getElementById('locality').value = data.results[1].formatted_address;
+                    alert(pos.lat + ' - ' + pos.long);
                     map.setCenter(pos.lat, pos.long);
-                    marker.setIcon(({
-//                        url: place.icon,
-                        size: new google.maps.Point(71, 71),
-                        origin: new google.maps.Point(0, 0),
-                        anchor: new google.maps.Point(17, 34),
-                        scaledSize: new google.maps.Size(35, 35)
-                    }));
-                    marker.setPosition(pos.lat, pos.long);
-                    marker.setVisible(true);
+                    var marker = new google.maps.Marker
+                    (
+                        {
+                            position: new google.maps.LatLng(pos.lat, pos.long),
+                            map: map,
+                            title: 'Click me'
+                        }
+                    );
                 });
             });
         }
