@@ -1,0 +1,19 @@
+div#pic{
+  position:absolute;
+  margin:15%;
+  left:0%;
+  top:0%;
+  width: 70%;
+  height:70%;
+  background-color: black;
+  background-image:url('pic1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  transition:opacity 0.5s;
+}
+div#pic:hover{
+  opacity:0.2;
+  cursor:pointer;
+}
