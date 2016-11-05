@@ -9,9 +9,9 @@ div#education{
   vertical-align: top;
   color:ghostwhite;
   transition:left 0.5s ease-in-out;
-  background-color: RGBA(209,57,36,0.8);
+  background-color: RGBA(0,0,0,0.9);
   z-index:20;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 span#collegeLogo, span#schoolLogo{
@@ -34,7 +34,7 @@ span#collegeName, span#schoolName{
 span#collegeDegree, span#schoolDegree{
   margin-bottom:10px;
   display:block;
-  font-size:1.3vw;
+  font-size:1.5vw;
 }
 span#collegeScore, span#collegeYear, span#schoolScore, span#schoolYear{
   margin:auto;
@@ -51,7 +51,7 @@ span#collegeDescription, span#schoolDescription{
 span#educationSeparator{
   width:50px;
   height:2px;
-  background-color: black;
+  background-color: ghostwhite;
   margin:auto;
   margin-top:50px;
   margin-bottom: 50px;

@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.getElementById('text'+id).style.transform='scale(2,2)';
     document.getElementById('text'+id).style.opacity='1';
     // document.getElementById('tabTitle').innerHTML = document.getElementById('text'+id).innerHTML;
-    document.getElementById('node'+id).style.backgroundColor='RGB(26,177,177)';
+    document.getElementById('node'+id).style.backgroundColor='RGB(20,20,20)';
     // if(id==nodes.length){
     //   document.getElementById('bar6').style.backgroundColor='RGB(26,177,177)';
     // }
@@ -83,6 +83,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     interval = 1;
   });
 
+
+  var skillText = document.getElementById('text2');
+  var skillNode = document.getElementById('node2');
+  skillText.addEventListener('click', populateSkills);
+  skillNode.addEventListener('click', populateSkills);
 
 // DOM loaded completely
 })

@@ -1,0 +1,26 @@
+div.donut {
+  position:absolute;
+  width: 200px;
+  height: 200px;
+  z-index: 40;
+}
+
+#donut1{
+  left:0px;
+}
+#donut2{
+  left:200px;
+}
+#donut1{
+  left:400px;
+}
+#donut4{
+  left:600px;
+}
+path.color0 {
+  fill: #1072b8;
+}
+
+path.color1 {
+  fill: #35526b;
+}
