@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     document.getElementById('text'+id).style.transform='scale(2,2)';
     document.getElementById('text'+id).style.opacity='1';
-    document.getElementById('tabTitle').innerHTML = document.getElementById('text'+id).innerHTML;
+    // document.getElementById('tabTitle').innerHTML = document.getElementById('text'+id).innerHTML;
     document.getElementById('node'+id).style.backgroundColor='RGB(26,177,177)';
     // if(id==nodes.length){
     //   document.getElementById('bar6').style.backgroundColor='RGB(26,177,177)';
