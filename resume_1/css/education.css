@@ -11,7 +11,7 @@ div#education{
   transition:left 0.5s ease-in-out;
   background-color: RGBA(209,57,36,0.8);
   z-index:20;
-  font-weight: 600;
+  font-weight: 900;
 }
 
 span#collegeLogo, span#schoolLogo{
