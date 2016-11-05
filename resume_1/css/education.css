@@ -1,12 +1,17 @@
 div#education{
   position:absolute;
   padding-top:5%;
+  left:300%;
   width:100%;
   height:100%;
   align-content: center;
   text-align: center;
   vertical-align: top;
-  background-color: #EEEEEE;
+  color:ghostwhite;
+  transition:left 0.5s ease-in-out;
+  background-color: RGBA(209,57,36,0.8);
+  z-index:20;
+  font-weight: 600;
 }
 
 span#collegeLogo, span#schoolLogo{
