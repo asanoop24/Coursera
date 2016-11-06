@@ -77,10 +77,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     interval = interval+1;
   },1000);
 
-  timeline.addEventListener('mouseover', function() {
+  timeline.addEventListener('mouseenter', function() {
     timeline.style.bottom = '0px';
     timelineOverlay.style.bottom = '0px';
-    interval = 1;
+    interval = -1000;
+  });
+  timeline.addEventListener('mouseleave', function(){
+    interval = 0;
   });
 
 

@@ -24,10 +24,14 @@
 <body>
 
   <div id='skills'>
-    <div class='donut' id="donut1"></div>
-    <div class='donut' id="donut2"></div>
-    <div class='donut' id="donut3"></div>
-    <div class='donut' id="donut4"></div>
+    <div class='donutRow1' id="donut1"><span class='donutText' id='donut1Text'>SQL</span></div>
+    <div class='donutRow1' id="donut2"><span class='donutText' id='donut2Text'>TABLEAU</span></div>
+    <div class='donutRow1' id="donut3"><span class='donutText' id='donut3Text'>PYTHON</span></div>
+    <div class='donutRow1' id="donut4"><span class='donutText' id='donut4Text'>QLIK SENSE</span></div>
+    <div class='donutRow2' id="donut5"><span class='donutText' id='donut5Text'>HTML/CSS/JS</span></div>
+    <div class='donutRow2' id="donut6"><span class='donutText' id='donut6Text'>SAS</span></div>
+    <div class='donutRow2' id="donut7"><span class='donutText' id='donut7Text'>R</span></div>
+    <div class='donutRow2' id="donut8"><span class='donutText' id='donut8Text'>VBA</span></div>
   </div>
 
 
@@ -64,6 +68,13 @@
   </div>
 
   <div id='contact'>
+    <input class='contactInfo' id="name" type="text" placeholder="Name" tabindex="1" autocomplete="off" spellcheck="false">
+    <input class='contactInfo' id="email" type="email" placeholder="Email Id" tabindex="2" autocomplete="off" spellcheck="false">
+    <textarea class='contactInfo' id="query" placeholder="What is this about?" tabindex="3" spellcheck="false"></textarea>
+    <div id='contactSubmit'>
+      <span id='contactSubmitOverlay'></span>
+      <input class='contactInfo' id="submit" type="submit" value="Submit" tabindex="4">
+    </div>
     <div id='fb' onclick="window.open('https://www.facebook.com/asanoop24', '_blank');">
       <span id='fbBlank'></span>
       <span id='fbFilled'></span>

@@ -3,13 +3,17 @@ var populateSkills = (function(){
    return function () {
        if (!executed) {
            executed = true;
-          var duration   = 4000,
+          var duration   = 2000,
               transition = 1000;
 
-          drawDonutChart('#donut1',42,150,150,".35em");
-          drawDonutChart('#donut2',87,150,150,".35em");
-          drawDonutChart('#donut3',76,150,150,".35em");
-          drawDonutChart('#donut4',88,150,150,".35em");
+          drawDonutChart('#donut1',90,100,100,".35em");
+          drawDonutChart('#donut2',90,100,100,".35em");
+          drawDonutChart('#donut3',70,100,100,".35em");
+          drawDonutChart('#donut4',80,100,100,".35em");
+          drawDonutChart('#donut5',85,100,100,".35em");
+          drawDonutChart('#donut6',74,100,100,".35em");
+          drawDonutChart('#donut7',75,100,100,".35em");
+          drawDonutChart('#donut8',90,100,100,".35em");
 
           function drawDonutChart(element, percent, width, height, text_y) {
             width = typeof width !== 'undefined' ? width : 290;
@@ -25,7 +29,7 @@ var populateSkills = (function(){
                 format = d3.format(".0%");
 
             var arc = d3.svg.arc()
-                  .innerRadius(radius - 10)
+                  .innerRadius(radius - 5)
                   .outerRadius(radius);
 
             var svg = d3.select(element).append("svg")

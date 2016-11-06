@@ -8,31 +8,47 @@ div#skills{
   text-align: center;
   vertical-align: top;
   color:ghostwhite;
-  transition:left 0.5s ease-in-out;
+  transition:left 1s ease-in;
   background-color: RGBA(0,0,0,0.9);
   z-index:20;
   font-weight: 600;
 }
 
-div.donut {
+div.donutRow1 {
   position:absolute;
-  width: 200px;
-  height: 200px;
+  top:20%;
+  width: 100px;
+  height: 100px;
   z-index: 40;
 }
+div.donutRow2 {
+  position:absolute;
+  top:calc(20% + 200px);
+  width: 100px;
+  height: 100px;
+  z-index: 40;
+}
+span.donutText{
+  position:absolute;
+  width:100%;
+  height:30px;
+  top:110px;
+  font-size: 1.2vw;
+}
 
-#donut1{
-  left:0px;
+#donut1, #donut5{
+  left:22%;
 }
-#donut2{
-  left:200px;
+#donut2, #donut6{
+  left:calc(22% + 200px);
 }
-#donut1{
-  left:400px;
+#donut3, #donut7{
+  left:calc(22% + 400px);
 }
-#donut4{
-  left:600px;
+#donut4, #donut8{
+  left:calc(22% + 600px);
 }
+
 path.color0 {
   fill: RGB(100,100,100);
 }

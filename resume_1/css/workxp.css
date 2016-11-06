@@ -8,7 +8,7 @@ div#workxp{
   text-align: center;
   vertical-align: top;
   color:ghostwhite;
-  transition:left 0.5s ease-in-out;
+  transition:left 1s ease-in;
   background-color: RGBA(0,0,0,0.9);
   z-index:20;
   font-weight: 600;
