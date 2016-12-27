@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<head>
+  <title>Project Tracker</title>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <meta name='viewport' content='height=device-height initial-scale=1'>
+  <!-- <link rel="shortcut icon" href="css/alpha.ico" /> -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link rel='stylesheet' href='css/menu.css'>
+  <link rel='stylesheet' href='css/account.css'>
+</head>
+
+<body>
+  <div id='account'>
+    <span class='accountButton' id='loginButton'>Login</span>
+    <span class='accountButton' id='registerButton'>Register</span>
+
+    <div class='accountPage' id='loginPage'>
+      <input id="emailLogin" type="email" placeholder="Email" tabindex="1" autocomplete="off" spellcheck="false">
+      <input id="passwordLogin" type="password" placeholder="Password" tabindex="2" autocomplete="off" spellcheck="false">
+      <div id="rememberMe" tabindex="3">
+        <div id=rememberMeCheckBox></div>
+        <span id="rememberMeTextBox">Remember Me</span>
+      </div>
+      <input id="submitLogin" type="submit" value="Submit" tabindex="4">
+      <a href='projects.html' id="forgotPassword">Forgot Password?</a>
+    </div>
+
+    <div class='accountPage' id='registerPage'>
+      <input id="nameRegister" type="text" placeholder="Name" tabindex="1" autocomplete="off" spellcheck="false">
+      <input id="mobileRegister" type="text" placeholder="Mobile" tabindex="2" autocomplete="off" spellcheck="false">
+      <input id="emailRegister" type="email" placeholder="Email" tabindex="3" autocomplete="off" spellcheck="false">
+      <input id="passwordRegister" type="password" placeholder="Password" tabindex="4" autocomplete="off" spellcheck="false">
+      <input id="submitRegister" type="submit" value="Submit">
+    </div>
+
+  </div>
+</body>
+<script src='js/account.js'></script>

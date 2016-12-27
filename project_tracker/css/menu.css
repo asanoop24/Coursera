@@ -1,0 +1,130 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro';
+  font-weight: 200;
+  background-color: ghostwhite;
+  margin: 0px;
+  padding: 0px;
+  transition: all 0.4s;
+}
+
+div#menu{
+  position: fixed;
+  top: 0px;
+  left: calc(-25% + 40px);
+  width: 25%;
+  height: 100%;
+  transition: all 0.4s;
+  z-index: 1000;
+}
+/**/
+/**/
+/**/
+/**/
+/*formatting the menu icon - begin*/
+div#menuIcon{
+  position: absolute;
+  top: 5px;
+  left: calc(100% - 35px);
+  width: 40px;
+  height: 25px;
+  cursor: pointer;
+}
+span.menuIconLine{
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background-color: #252839;
+  transform: rotate(0deg);
+  transition: all 0.4s;
+}
+span#menuIconLine_1{
+  top: 0%;
+}
+span#menuIconLine_2{
+  top: calc(50% - 1px);
+  opacity: 1;
+  transition: all 0.4s;
+}
+span#menuIconLine_3{
+  bottom: 0%;
+}
+/*formatting the menu icon - end*/
+/**/
+/**/
+/**/
+/**/
+/*formatting the menu items - begin*/
+ul#menuItems{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width:calc(100% - 40px);
+  height: inherit;
+  background-color: #252839;
+  padding-top: 50px;
+}
+li.menuItem{
+  list-style: none;
+  background-color: inherit;
+  color: ghostwhite;
+  font-size: 1.75vw;
+  padding-left: 20px;
+  border-bottom: 1px solid RGBA(252,253,253,0.1);
+  line-height: 60px;
+  transition: background-color 0.4s;
+  text-decoration: none;
+  cursor: pointer;
+}
+li.menuItem:hover{
+  background-color: RGB(66,171,151);
+}
+li.menuItem > a{
+  text-decoration: none;
+  background-color: #252839;
+  color:inherit;
+}
+li.menuItem:hover > a{
+  text-decoration: none;
+  background-color: RGB(66,171,151);
+  color:inherit;
+}
+/*formatting the menu items - end*/
+/**/
+/**/
+/**/
+/**/
+/**/
+/*animating the menu icon - begin*/
+div#menu.menuActive{
+  left: 0%;
+}
+span#menuIconLine_1.menuActive{
+  top: calc(50% - 1px);
+  transform: rotate(-45deg);
+}
+span#menuIconLine_2.menuActive{
+  top: calc(50% - 1px);
+  opacity: 0;
+}
+span#menuIconLine_3.menuActive{
+  bottom: calc(50% - 1px);
+  transform: rotate(45deg);
+}
+
+
+div#menu.menuInactive{
+  left: calc(-25% + 40px);
+}
+span#menuIconLine_1.menuInactive{
+  top: 0%;
+}
+span#menuIconLine_2.menuInactive{
+  top: calc(50% - 1px);
+  opacity: 1;
+}
+span#menuIconLine_3.menuInactive{
+  bottom: 0%;
+}
+/*animating the menu icon - end*/
