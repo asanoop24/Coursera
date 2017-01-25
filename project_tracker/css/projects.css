@@ -40,7 +40,7 @@ div.projectHeader{
   border-bottom:1px solid RGBA(152,153,153,0.9);
   cursor:pointer;
 }
-li.project.activeProject span.projectTitle{
+li.project.viewProject span.projectTitle{
   padding-left:40%;
 }
 span.resourceImage{
@@ -58,28 +58,74 @@ div.projectBody{
   font-size:30px;
   margin-top:20px;
 }
-
 div.projectField{
   display:flex;
   flex-direction:column;
-  min-width:25%;
-  justify-content: center;
-  margin-bottom:50px;
+  min-width: 25%;
+  justify-content:center;
+  margin-bottom:30px;
 }
 span.projectFieldName{
   font-size:20px;
   font-weight:300;
 }
-span.projectFieldValue{
-  font-size:30px;
+div.projectFieldValue{
+  font-size:32px;
   font-weight:300;
+  display:flex;
+  flex-direction:column;
+  height:40px;
+  overflow-y:hidden;
 }
-input{
+
+span.viewProjectField{
+  height:40px;
+  position:relative;
+  top:0px;
+}
+input.editProjectField{
   outline:none;
   border:none;
   border-bottom:1px solid RGB(200,200,200);
   color:RGB(130,130,130);
-  height:30px;
+  height:40px;
   width:80%;
-  font-size:25px;
+  font-size:30px;
+  position:relative;
+  top:0px;
+}
+div#sidePanel{
+  position:fixed;
+  /*display:flex;
+  justify-content:space-between;*/
+  top:40%;
+  width:100px;
+  right:-100px;
+  height:50px;
+  background-color:#252839;
+  border-top-left-radius:10px;
+  border-bottom-left-radius:10px;
+  overflow-x: hidden;
+}
+span#editIcon{
+  background:url('images/edit.png') no-repeat;
+  background-size:cover;
+  width:40px;
+  height:40px;
+  display:inline-block;
+  cursor:pointer;
+  position:relative;
+  left:5px;
+  top:5px;
+}
+span#saveIcon{
+  background:url('images/save.png') no-repeat;
+  background-size:cover;
+  width:40px;
+  height:40px;
+  display:inline-block;
+  cursor:pointer;
+  position:relative;
+  left:5px;
+  top:5px;
 }
