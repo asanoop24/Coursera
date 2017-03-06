@@ -1,0 +1,7 @@
+combinations = '[\
+{"Sno": "1","sourcePartNumber": "A1","sourcePartImage": "css/images/c1_p1.png","targetPartNumber": "B1","targetPartImage": "css/images/c1_p2.png"},\
+{"Sno": "2","sourcePartNumber": "A2","sourcePartImage": "css/images/c2_p1.png","targetPartNumber": "B2","targetPartImage": "css/images/c2_p2.png"},\
+{"Sno": "3","sourcePartNumber": "A3","sourcePartImage": "css/images/c3_p1.png","targetPartNumber": "B3","targetPartImage": "css/images/c3_p2.png"},\
+{"Sno": "4","sourcePartNumber": "A4","sourcePartImage": "css/images/c4_p1.png","targetPartNumber": "B4","targetPartImage": "css/images/c4_p2.png"},\
+{"Sno": "5","sourcePartNumber": "A5","sourcePartImage": "css/images/c5_p1.png","targetPartNumber": "B5","targetPartImage": "css/images/c5_p2.png"}\
+]'
