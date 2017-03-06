@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<head>
+  <title>Project Tracker</title>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <meta name='viewport' content='height=device-height initial-scale=1'>
+  <!-- <link rel="shortcut icon" href="css/alpha.ico" /> -->
+  <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,200,300,400,500,600,700,800,900'>
+  <link rel='stylesheet' href='css/main.css'>
+</head>
+
+<body>
+  <div id='container'>
+    <div id='parts'>
+      <div class='part' id='part1'>
+        <span class='partImage' id='sourcePartImage'></span>
+        <span class='partNumber' id='sourcePartNumber'></span>
+      </div>
+      <div class='part' id='part2'>
+        <span class='partImage' id='targetPartImage'></span>
+        <span class='partNumber' id='targetPartNumber'></span>
+      </div>
+    </div>
+
+    <div id='feedback'>
+      <span class='feedbackItem' id='feedbackYes'></span>
+      <span class='feedbackItem' id='feedbackNo'></span>
+    </div>
+
+    <a href='#' id='link' download='results.json'><div id='download'>Download Results</div></a>
+
+  </div>
+</body>
+
+<script type="text/javascript" src="js/combinations.json"></script>
+<script src='js/main.js'></script>
