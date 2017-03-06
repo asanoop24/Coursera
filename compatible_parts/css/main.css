@@ -113,8 +113,9 @@ div#download:hover{
   color: ghostwhite;
   background-color: #252839;
 }
-a{
+a#link{
   text-decoration: none;
   color: black;
   width: 200px;
+  visibility: hidden;
 }

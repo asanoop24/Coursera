@@ -42,6 +42,7 @@ function processFeedback(){
     JSON.stringify(feedbackArray);
     console.log(feedbackArray);
     console.log(JSON.stringify(feedbackArray));
+    document.querySelector('#link').style.visibility = 'visible';
     return;
   }
   feedbackValue = this.id.substring(8,this.id.length);
